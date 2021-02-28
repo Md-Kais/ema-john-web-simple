@@ -1,0 +1,27 @@
+.header img{
+  
+    width: 50%;
+    height:40%;
+    /* center start */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+   /* center done */
+   
+}
+.header nav{
+    background-color: black;
+    line-height: 45px;
+    
+  
+}
+.header a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 13px;
+    padding: 10px;
+}
+.header a:hover{
+    background-color: lightblue;
+}

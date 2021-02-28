@@ -1,0 +1,16 @@
+.shop{
+    display: flex;
+    margin-left: 20px;
+}
+.product-container{
+    width:80%;
+    border-right: 1px solid lightblue;
+    overflow: auto;
+   margin: 0px 10px 10px 10px; /*t r b l*/
+   padding: 3px;
+ 
+}
+/* .cart-container{
+    margin-left: 5px;
+    margin-right:3px;
+} */
