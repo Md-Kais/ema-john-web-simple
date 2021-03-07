@@ -47,7 +47,7 @@ const Order = () => {
             <div className="cart-container">
                 {/* <h1>this is cart</h1>
                  <h1> Order :  {cart.length}</h1> */}
-                <Cart name='manage'></Cart>
+                <Cart name='manage' process="Place Order"></Cart>
                 {/* <button className="button" ><Link to='/manage' style={style}>Procceed</Link></button> */}
             </div>
 

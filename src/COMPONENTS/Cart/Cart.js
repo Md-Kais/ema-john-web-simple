@@ -93,7 +93,7 @@ const Cart = (props) => {
                 <p>Grand Total: {fixedMe(total + tax + shipping)}</p>
             </div>
             <div style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
-                <button className="button" ><Link to={`/${props.name}`} style={style}>Procceed</Link></button>
+                <button className="button" ><Link to={`/${props.name}`} style={style}>{props.process}</Link></button>
             </div>
         </>
     );
