@@ -12,13 +12,27 @@ const Shop = () => {
    
     const handleClick=(product)=>{
        
-         const newCart = [...cart , product];
+        const newCart = [...cart , product];
         setCart (newCart);
-       
+        console.log(product);
+        if(localStorage.getItem(`${product.key}`)===null){
+            
+            localStorage.setItem(`${product.key}`,'1');//0 cannot be default
+            console.log(localStorage.getItem(`${product.key}`));
+        }
+        else{
+            
+            let count = localStorage.getItem(`${product.key}`);
+            count=Number(count)+1;
+            localStorage.setItem(`${product.key}`,count);
+            console.log(localStorage.getItem(`${product.key}`));
+        }
+      
     }
+    
    
     //let newProducts=[...]
-    console.log(products);
+   // console.log(products);
     return (
         <div className="shop">
             <div className="product-container">

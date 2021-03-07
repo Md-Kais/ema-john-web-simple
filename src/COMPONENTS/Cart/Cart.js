@@ -1,40 +1,74 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+
 import './Cart.css'
 
-function fixedMe(number){
-   number = number.toFixed(2);
-   return Number(number);
+function fixedMe(number) {
+    number = number.toFixed(2);
+    return Number(number);
 }
 
-//console.log(fixedMe(2.2345432345434));
 
 const Cart = (props) => {
+    let cartItems = 0;
+    ///const object=JSON.parse(localStorage);
+    const object = JSON.parse(JSON.stringify(localStorage));
+    //make it string then again object . XIX -Slipknot. 
+    //console.log(Object.keys(object));
+    const cartObject = Object.keys(object);
+    //console.log(localStorage);
+    for (let x in cartObject) {
+        cartItems += Number(localStorage.getItem(cartObject[x]));
+
+        //console.log(cartItems,x);
+    }
+    //cart Items end
+
+
     const cart = props.cart;
     let total = cart.reduce((total, prd) => total + prd.price, 0);
-    total=fixedMe(total);
-    let shipping=0;
-    if(total>35){
-        shipping=0;
+    if(total===0 && Number(sessionStorage.getItem('total') > 0)){
+        total=Number(sessionStorage.getItem('total'))
     }
-    else if(total>15){
-        shipping=4.99;
-    }
-    else if(total>0){
-        shipping= 12.99;
-    }
-    let tax=total/10;
-    tax=fixedMe(tax);
 
+
+
+
+    total = fixedMe(total);
+    let shipping = 0;
+    if (total > 35) {
+        shipping = 0;
+    }
+    else if (total > 15) {
+        shipping = 4.99;
+    }
+    else if (total > 0) {
+        shipping = 12.99;
+    }
+    let tax = total / 10;
+    tax = fixedMe(tax);
+    const style = {
+        fontSize: '20px',
+        color: 'white',
+        textDecoration: 'none',
+        padding: '10px'
+    }
 
     return (
-        <div className="cart">
-          <h3>Order Summary </h3>
-            <p>Items Ordered : {props.cart.length}</p>
-            <p>Total : {fixedMe(total)} </p>
-            <p>Shipping: {shipping}</p>
-            <p>Tax : {tax}</p>
-            <p>Grand Total: {fixedMe(total+tax+shipping)}</p>
-        </div>
+        <>
+            <div className="cart">
+                <h3>Order Summary </h3>
+                <p>Items Ordered : {cartItems}</p>
+                <p>Total : {fixedMe(total)} </p>
+                <p>Shipping: {shipping}</p>
+                <p>Tax : {tax}</p>
+                <p>Grand Total: {fixedMe(total + tax + shipping)}</p>
+            </div>
+            <div style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
+                <button className="button" ><Link to='/orderReview' style={style}>Procceed</Link></button>
+            </div>
+        </>
     );
 };
 
