@@ -37,13 +37,13 @@ const Shop = () => {
         <div className="shop">
             <div className="product-container">
                 {
-                    products.map(product =><Product handleClick={handleClick} pd={product}></Product>)
+                    products.map(product =><Product handleClick={handleClick} pd={product} key={product.key}></Product>)
                 }
             </div>
             <div className="cart-container">
                 {/* <h1>this is cart</h1>
                  <h1> Order :  {cart.length}</h1> */}
-                 <Cart cart={cart}></Cart>
+                 <Cart name='orderReview'></Cart>
             </div>
         </div>
     );

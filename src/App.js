@@ -5,14 +5,14 @@ import Shop from './COMPONENTS/Shop/Shop';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
+  
 } from "react-router-dom";
 import OrderReview from './COMPONENTS/Order/OrderReview.js';
 import Manage from './COMPONENTS/Manage/Manage.js';
 import Refresh from './COMPONENTS/Refresh/Refresh.js';
 import ProductDetailed from './/COMPONENTS/ProductDetailed/ProductDetailed'
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+
 function App() {
   return (
 

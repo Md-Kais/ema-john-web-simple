@@ -21,7 +21,7 @@ const OrderRevCard = (props) => {
         PRICE();
     }
    let realProduct = props.realProduct;
-    console.log(props.realProduct)
+   // console.log(props.realProduct)
     const realProduc = fakeData.find(pd => { return realProduct === pd.key });
     const { img, name, price, seller, star, stock } = realProduc;
     
@@ -54,7 +54,7 @@ const OrderRevCard = (props) => {
                 <button className="button" onClick={() => { removeClick(props.realProduct) }}>Remove 1 item from this</button>
             </div>
              <hr/>
-            <h1>Total Price: {totAmount}</h1>
+            <h1>Price(items): {totAmount}</h1>
             <hr></hr>
         </div>
     );
