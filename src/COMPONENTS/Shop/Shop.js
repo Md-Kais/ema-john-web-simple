@@ -14,7 +14,7 @@ const Shop = () => {
        
         const newCart = [...cart , product];
         setCart (newCart);
-        console.log(product);
+      //  console.log(product);
         if(localStorage.getItem(`${product.key}`)===null){
             
             localStorage.setItem(`${product.key}`,'1');//0 cannot be default
@@ -25,7 +25,7 @@ const Shop = () => {
             let count = localStorage.getItem(`${product.key}`);
             count=Number(count)+1;
             localStorage.setItem(`${product.key}`,count);
-            console.log(localStorage.getItem(`${product.key}`));
+         //   console.log(localStorage.getItem(`${product.key}`));
         }
       
     }

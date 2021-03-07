@@ -26,27 +26,38 @@ const Cart = (props) => {
     }
     //cart Items end
 
-    let [total, setTotal]=useState(0);
-    let xTotal=0;
-    
-   // let total = cart.reduce((total, prd) => total + prd.price, 0);
-     useEffect(()=>{
-         for(let x in cartObject){
-            let data=fakeData.find((pdKey)=>cartObject[x]===pdKey.key);
-            let {price}=data;
-            let quantity = Number(localStorage.getItem(cartObject[x]));
-            xTotal+=Number(price*quantity);
-         //   console.log(xTotal);
+    let [total, setTotal] = useState(0);
+    let xTotal = 0;
+   
+
+    // let total = cart.reduce((total, prd) => total + prd.price, 0);
+    useEffect(() => {
+        if(cartItems===0){
+            xTotal= Number(0);
             setTotal(xTotal);
+        }
+        else{
+            for (let x in cartObject) {
+                let data = fakeData.find((pdKey) => cartObject[x] === pdKey.key);
+                let { price } = data;
+                let quantity = Number(localStorage.getItem(cartObject[x]));
+                xTotal += Number(price * quantity);
+                  console.log(xTotal);
+                setTotal(xTotal);
 
 
-         }
+            }
+           
+        }
        
-     },[cartItems]);
+
+    }, [cartItems]);
+   
     
-    if(total===0 && Number(sessionStorage.getItem('total') > 0)){
-        total=Number(sessionStorage.getItem('total'))
-    }
+
+
+
+    
 
 
 
