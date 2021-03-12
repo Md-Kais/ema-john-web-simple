@@ -9,3 +9,7 @@ Btw, Please Tell me She Won't Change. (Slipknot - "Killpop")
 IF YOU Wanna Join The Triangle , Click The Link  below, But Be aware, It Defiles.
 
 https://quirky-volhard-05dd8d.netlify.app/
+
+SlipKnot KillPop: 
+
+https://www.youtube.com/watch?v=mhJh5_6MuCk
