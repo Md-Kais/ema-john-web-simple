@@ -7,3 +7,5 @@ This Triangle makes This Website for Buying their Gifts For Each Other. But Ema'
 Btw, Please Tell me She Won't Change. (Slipknot - "Killpop")
 
 IF YOU Wanna Join The Triangle , Click The Link  below, But Be aware, It Defiles.
+
+https://quirky-volhard-05dd8d.netlify.app/
